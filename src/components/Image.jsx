@@ -19,7 +19,7 @@ function Image({ image }) {
       {...listeners}
       src={url}
       alt={tag}
-      loading="lazy"
+      // loading="lazy"
     />
   );
 }
