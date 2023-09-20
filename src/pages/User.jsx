@@ -20,10 +20,12 @@ function User() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  // Loading effect
   useEffect(function () {
     setTimeout(() => setLoading(false), 1000);
   }, []);
 
+  // Search functionality
   function filterImage(e) {
     e.preventDefault();
     setLoading(true);
@@ -37,6 +39,7 @@ function User() {
     setLoading(false);
   }
 
+  // drag and drop functionality
   function onDragEnd(event) {
     const { active, over } = event;
     if (active.id === over.id) return;
@@ -51,6 +54,7 @@ function User() {
     });
   }
 
+  //Sign-Out functionality
   async function signOut() {
     const { error } = await supabase.auth.signOut();
     if (!error) navigate("/");

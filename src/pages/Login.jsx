@@ -10,6 +10,7 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  //Login functionality
   async function handleLogin(e) {
     e.preventDefault();
     try {
