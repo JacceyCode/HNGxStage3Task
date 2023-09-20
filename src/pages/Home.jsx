@@ -1,12 +1,16 @@
-import { useNavigation } from "react-router-dom";
 import Header from "../components/Header";
 import Image from "../components/Image";
 import { imageList } from "../imageList/ImageList";
 import Loader from "../components/Loader";
+import { useEffect, useState } from "react";
 
 function Home() {
-  const navigation = useNavigation();
-  const isLoading = navigation.state === "loading";
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Loading effect
+  useEffect(function () {
+    setTimeout(() => setIsLoading(false), 1500);
+  }, []);
 
   return (
     <section className="p-2">

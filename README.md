@@ -33,6 +33,12 @@ For registered user's:
 - User's can also sign-out when done by clicking on the logout button by the top right corner of the gallery.
 </p>
 
+<p align='left'>Test Login details are:
+
+- Email: user@example.com
+- Password: 1Password
+</p>
+
 <p align='left'>Enjoy using the gallery!!!</p>
 
 <h3 align="left">Connect with me on github: @JacceyCode</h3>

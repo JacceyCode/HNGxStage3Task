@@ -63,6 +63,7 @@ function Login() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+            <p className="text-sm">Email: user@example.com</p>
             <label className="p-1 text-lg font-medium" htmlFor="password">
               Password:
             </label>
@@ -74,6 +75,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <p className="text-sm">Password: 1Password</p>
             <button className="w-20 rounded-full bg-lime-500 p-1 text-lg font-medium">
               Login
             </button>
