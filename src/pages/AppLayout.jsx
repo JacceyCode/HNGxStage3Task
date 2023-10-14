@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 function AppLayout() {
   return (
-    <section className="relative min-h-screen bg-stone-300 pb-12">
+    <section className="relative min-h-screen bg-[#d4d4d4] pb-12">
       <Outlet />
 
       <Footer />

@@ -43,40 +43,45 @@ function Login() {
       {loading ? (
         <Loader />
       ) : (
-        <section className="flex flex-col items-center justify-center p-4">
-          <h2 className="p-2 font-mono text-4xl italic text-lime-600">
+        <section className="mx-auto mt-12 flex w-fit flex-col items-center justify-center rounded-2xl bg-lime-600/60 shadow-xl shadow-lime-500 sm:gap-8">
+          <h2 className="border-b-2 border-lime-500 p-2 font-mono text-4xl italic text-black">
             SIgn In
           </h2>
           <form
             onSubmit={handleLogin}
-            className="flex w-96 flex-col items-start justify-center gap-2 rounded-2xl border-4 border-lime-500 p-4"
-            action=""
+            className="flex flex-col items-start justify-center gap-6 p-4 sm:w-96"
           >
-            <label className="p-1 text-lg font-medium" htmlFor="email">
-              Email:
-            </label>
-            <input
-              className="focus:outline-solid w-full rounded-2xl p-2 outline-none focus:outline-2 focus:outline-offset-4 focus:outline-lime-500"
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <p className="text-sm">Email: user@example.com</p>
-            <label className="p-1 text-lg font-medium" htmlFor="password">
-              Password:
-            </label>
-            <input
-              className="focus:outline-solid w-full rounded-2xl p-2 outline-none focus:outline-2 focus:outline-offset-4 focus:outline-lime-500"
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <p className="text-sm">Password: 1Password</p>
-            <button className="w-20 rounded-full bg-lime-500 p-1 text-lg font-medium">
+            <section className="w-full space-y-2">
+              <label className="p-1 text-lg font-medium" htmlFor="email">
+                Email:
+              </label>
+              <input
+                className="w-full rounded-2xl bg-[#d4d4d4] p-4 outline-none"
+                type="email"
+                id="email"
+                placeholder="Input email here"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <p className="text-sm">Email: user@example.com</p>
+            </section>
+            <section className="w-full space-y-2">
+              <label className="p-1 text-lg font-medium" htmlFor="password">
+                Password:
+              </label>
+              <input
+                className="w-full rounded-2xl bg-[#d4d4d4] p-4 outline-none"
+                type="password"
+                id="password"
+                value={password}
+                placeholder="Input password here"
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <p className="text-sm">Password: 1Password</p>
+            </section>
+            <button className="mx-auto w-32 rounded-full bg-lime-500 p-1 text-xl font-medium shadow-inner shadow-lime-800 transition-all hover:scale-110">
               Login
             </button>
           </form>

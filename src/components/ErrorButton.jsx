@@ -6,7 +6,7 @@ function ErrorButton({ children }) {
 
   return (
     <button
-      className="rounded-full border-4 bg-red-400 p-4 duration-200 hover:scale-110"
+      className="rounded-full border-4 border-lime-400 bg-lime-600 p-4 shadow-inner shadow-lime-300/90 duration-200 hover:scale-110"
       onClick={() => navigate(-1)}
     >
       {children}

@@ -1,6 +1,5 @@
 import LoginBtn from "./LoginBtn";
 import Logo from "./Logo";
-// import { Link } from "react-router-dom";
 
 function Header() {
   return (

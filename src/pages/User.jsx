@@ -63,7 +63,7 @@ function User() {
 
   return (
     <>
-      <header className="mb-2 flex flex-wrap items-center justify-between px-8 py-4">
+      <header className="mb-2 flex flex-wrap items-center justify-between px-6 py-4">
         <Logo />
 
         <LoginBtn onClick={signOut}>Log Out</LoginBtn>
@@ -74,13 +74,13 @@ function User() {
       ) : (
         <section className="mb-8 p-2 text-black">
           <section className="mb-2 flex flex-wrap items-center justify-center space-x-4">
-            <section>
+            <section className="space-y-2 px-4">
               <form
                 onSubmit={filterImage}
                 className="relative mb-1 flex h-8 w-80 items-center lg:h-12 lg:w-96"
               >
                 <input
-                  className="absolute inline-flex h-full w-full rounded-full bg-yellow-300 p-1 outline-none placeholder:text-black focus:border-2 focus:border-black lg:p-4 lg:placeholder:text-lg"
+                  className="flex w-full rounded-full bg-lime-500 p-4 outline-none placeholder:text-black focus:border-2 focus:border-black lg:placeholder:text-lg"
                   type="text"
                   placeholder="Input tag name"
                   value={tag}

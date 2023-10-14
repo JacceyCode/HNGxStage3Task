@@ -9,7 +9,7 @@ function Home() {
 
   // Loading effect
   useEffect(function () {
-    setTimeout(() => setIsLoading(false), 1500);
+    setTimeout(() => setIsLoading(false), 1000);
   }, []);
 
   return (
