@@ -63,7 +63,7 @@ function User() {
 
   return (
     <>
-      <header className="mb-2 flex flex-wrap items-center justify-between px-6 py-4">
+      <header className="flex w-full flex-wrap items-center justify-between px-4 py-4 sm:px-6 2xl:w-4/5">
         <Logo />
 
         <LoginBtn onClick={signOut}>Log Out</LoginBtn>
@@ -72,25 +72,23 @@ function User() {
       {loading ? (
         <Loader />
       ) : (
-        <section className="mb-8 p-2 text-black">
-          <section className="mb-2 flex flex-wrap items-center justify-center space-x-4">
-            <section className="space-y-2 px-4">
-              <form
-                onSubmit={filterImage}
-                className="relative mb-1 flex h-8 w-80 items-center lg:h-12 lg:w-96"
-              >
-                <input
-                  className="flex w-full rounded-full bg-lime-500 p-4 outline-none placeholder:text-black focus:border-2 focus:border-black lg:placeholder:text-lg"
-                  type="text"
-                  placeholder="Input tag name"
-                  value={tag}
-                  onChange={(e) => setTag(e.target.value)}
-                  required
-                />
-                <button className="absolute right-2">🔍</button>
-              </form>
-              <p>Search with tag names like Car, House, Nature or Animal.</p>
-            </section>
+        <section className="space-y-6 p-2 text-black">
+          <section className="flex flex-col items-center justify-center space-y-2">
+            <form
+              onSubmit={filterImage}
+              className="relative mb-1 flex w-full items-center justify-between md:w-1/2"
+            >
+              <input
+                className="flex w-full rounded-full bg-lime-500 p-4 shadow-inner shadow-lime-700 outline-none placeholder:text-black focus:border-2 focus:border-black lg:placeholder:text-lg"
+                type="text"
+                placeholder="Input tag name"
+                value={tag}
+                onChange={(e) => setTag(e.target.value)}
+                required
+              />
+              <button className="absolute right-4">🔍</button>
+            </form>
+            <p>Search with tag names like Car, House, Nature or Animal.</p>
             {error && (
               <h3 className="text-lg text-red-400">
                 Wrong tag name, please try again.

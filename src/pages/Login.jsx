@@ -38,12 +38,12 @@ function Login() {
   }
 
   return (
-    <section className="p-8">
+    <section className="flex flex-col items-center justify-center gap-4 p-4 sm:pt-16">
       <Logo />
       {loading ? (
         <Loader />
       ) : (
-        <section className="mx-auto mt-12 flex w-fit flex-col items-center justify-center rounded-2xl bg-lime-600/60 shadow-xl shadow-lime-500 sm:gap-8">
+        <section className="mx-auto flex w-fit flex-col items-center justify-center rounded-2xl bg-lime-600/60 shadow-xl shadow-lime-500 sm:mt-12 sm:gap-8">
           <h2 className="border-b-2 border-lime-500 p-2 font-mono text-4xl italic text-black">
             SIgn In
           </h2>

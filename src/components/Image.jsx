@@ -12,7 +12,7 @@ function Image({ image }) {
   };
   return (
     <img
-      className="h-64 w-72 cursor-grab rounded-2xl shadow-lg shadow-slate-700/90 transition-all hover:-translate-y-6 hover:scale-105"
+      className="h-64 w-80 cursor-grab rounded-2xl shadow-lg shadow-slate-700/90 transition-all hover:-translate-y-6 hover:scale-105"
       ref={setNodeRef}
       {...attributes}
       style={style}
